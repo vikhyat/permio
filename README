@@ -1,0 +1,14 @@
+Permio is a script that generates a gallery of images.
+
+The script assumes that all images are in the images/ directory.
+
+Run it using this command: ruby generate_html.rb > gallery.html
+
+You would also want to edit gallery.erb.
+
+You should also download Galleria[1] into the root directory.
+
+All of the code is released under the MIT/X11 license[2].
+
+[1] http://galleria.aino.se/
+[2] http://www.opensource.org/licenses/mit-license.php

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Signature Gallery</title>
+    <style type="text/css">
+      #galleria { height:400px }
+      body {
+        background: #111;
+        color: #ccc;
+        font-family: 'Droid Sans', 'Lucida Grande', Tahoma, Verdana, Arial, sans-serif;
+      }
+      a:link, a:visited, a:active, a:hover, a {
+        color: #f26100;
+        font-weight: bold;
+        text-decoration: none;
+      }
+      .content {
+        width: 600px;
+        margin: 20px auto;
+      }
+      blockquote {
+        background: #222;
+        padding: 20px;
+        font-size: 80%;
+        color: #aaa;
+      }
+    </style>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script src="galleria/src/galleria.js"></script>
+  
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans&subset=latin' rel='stylesheet' type='text/css'>
+
+  </head>
+  <body>
+    <div class="content">
+      <div class="images">
+        <% images.each do |img| %>
+          <image src="<%= img %>" alt="Created <%= File.new(img).mtime %>" />
+        <% end %>
+      </div>
+
+      <p>This is a gallery of some of the forum signatures created by <a href="http://vikhyat.net/">me</a> over the course of two years.</p>
+
+      <p>From Wikipedia, </p>
+      <blockquote>Signatures are seen as an art form by many of their creators, and there are many websites centered around their creation and display. Some of these websites have competitions, battles and signature of the week contests, where members submit their entries to have them featured on the website.</blockquote>
+
+      <p>Some of my larger artwork (including photography) is on <a href="http://celebrus.deviantart.com/gallery/">DeviantArt</a>.</p>
+
+      <p>This page was created using <a href="http://galleria.aino.se/">Galleria</a> and a small ruby script called Permio written by me, both of which are open-source.</p>
+
+      <script>
+        Galleria.loadTheme('galleria/src/themes/classic/galleria.classic.js');
+        $('.images').galleria({max_scale_ratio:1});
+      </script>
+    </div>
+  </body>
+</html>
+
