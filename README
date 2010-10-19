@@ -10,3 +10,9 @@ All of the code is released under the MIT/X11 license[2].
 
 [1] http://galleria.aino.se/
 [2] http://www.opensource.org/licenses/mit-license.php
+
+--
+TODO:
+(1) clean up non-specific stuff
+(2) try to make a standalone app for Windows
+(3) include galleria in the source code. (??)
